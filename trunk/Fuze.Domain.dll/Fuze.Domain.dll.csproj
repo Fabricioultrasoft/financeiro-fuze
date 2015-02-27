@@ -41,12 +41,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstracts\Controller\BE\AbstractBE.cs" />
+    <Compile Include="Abstracts\Model\DAO\AbstractDAO.cs" />
+    <Compile Include="Abstracts\Model\VO\AbstractVO.cs" />
+    <Compile Include="Controller\BE\CleroBE.cs" />
+    <Compile Include="Model\DAO\CleroDAO.cs" />
+    <Compile Include="Model\VO\CampoRequerido.cs" />
+    <Compile Include="Model\VO\CidadeVO.cs" />
+    <Compile Include="Model\VO\CleroVO.cs" />
+    <Compile Include="Model\VO\CorVO.cs" />
+    <Compile Include="Model\VO\EmpresaVO.cs" />
+    <Compile Include="Model\VO\EstadoVO.cs" />
+    <Compile Include="Model\VO\PaisVO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstracts\Model\DAO\" />
-    <Folder Include="Abstracts\Model\VO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
