@@ -82,12 +82,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Dll\Fuze.Domain.dll\Fuze.Domain.dll.csproj">
-      <Project>{5317815D-B803-4149-BF62-0FA0C2A447A8}</Project>
-      <Name>Fuze.Domain.dll</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
