@@ -15,7 +15,7 @@ namespace FuzeFinanceiro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Teste());
+            //Application.Run(new Teste());
         }
     }
 }
