@@ -45,7 +45,6 @@
     <Compile Include="Abstracts\Model\VO\AbstractVO.cs" />
     <Compile Include="Controller\BE\CleroBE.cs" />
     <Compile Include="Model\DAO\CleroDAO.cs" />
-    <Compile Include="Model\VO\CampoRequerido.cs" />
     <Compile Include="Model\VO\CidadeVO.cs" />
     <Compile Include="Model\VO\CleroVO.cs" />
     <Compile Include="Model\VO\CorVO.cs" />
