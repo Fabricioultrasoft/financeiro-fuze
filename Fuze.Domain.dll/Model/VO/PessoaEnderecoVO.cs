@@ -6,13 +6,9 @@ using Fuze.Domain.dll.Abstracts.Model.VO;
 
 namespace Fuze.Domain.dll.Model.VO
 {
-    public class PaisVO : AbstractVO
+    public class PessoaEnderecoVO : AbstractVO
     {
-        public string Nome { get; set; }
-
-        public PaisVO()
-        {
-
-        }
+        public PessoaVO Pessoa { get; set; }
+        public int MyProperty { get; set; }
     }
 }

@@ -50,8 +50,14 @@
     <Compile Include="Model\VO\CleroVO.cs" />
     <Compile Include="Model\VO\CorVO.cs" />
     <Compile Include="Model\VO\EmpresaVO.cs" />
+    <Compile Include="Model\VO\EstadoCivilVO.cs" />
     <Compile Include="Model\VO\EstadoVO.cs" />
+    <Compile Include="Model\VO\FeriadoTipoVO.cs" />
+    <Compile Include="Model\VO\FeriadoVO.cs" />
     <Compile Include="Model\VO\PaisVO.cs" />
+    <Compile Include="Model\VO\PessoaEnderecoVO.cs" />
+    <Compile Include="Model\VO\PessoaTipoVO.cs" />
+    <Compile Include="Model\VO\PessoaVO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
