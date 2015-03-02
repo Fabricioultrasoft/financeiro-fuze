@@ -6,11 +6,11 @@ using Fuze.Domain.dll.Abstracts.Model.VO;
 
 namespace Fuze.Domain.dll.Model.VO
 {
-    public class PaisVO : AbstractVO
+    public class EstadoCivilVO : AbstractVO
     {
-        public string Nome { get; set; }
+        public string Descricao { get; set; }
 
-        public PaisVO()
+        public EstadoCivilVO()
         {
 
         }
