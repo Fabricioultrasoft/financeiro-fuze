@@ -33,9 +33,6 @@
             this.PageFormulario = new DevExpress.XtraTab.XtraTabControl();
             this.TabConsulta = new DevExpress.XtraTab.XtraTabPage();
             this.pnlGrade = new DevExpress.XtraEditors.PanelControl();
-            this.GradeDados = new DevExpress.XtraGrid.GridControl();
-            this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.grpFiltro = new DevExpress.XtraEditors.GroupControl();
             this.btnConsultar = new DevExpress.XtraEditors.SimpleButton();
             this.EdtTipo = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -53,7 +50,11 @@
             this.btnSair = new DevExpress.XtraNavBar.NavBarItem();
             this.TabCadastro = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.EdtCodigo = new DevExpress.XtraEditors.TextEdit();
+            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.lblCodigo = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.BtnCancelar = new DevExpress.XtraEditors.SimpleButton();
@@ -68,8 +69,6 @@
             this.TabConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlGrade)).BeginInit();
             this.pnlGrade.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GradeDados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpFiltro)).BeginInit();
             this.grpFiltro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EdtTipo.Properties)).BeginInit();
@@ -78,7 +77,9 @@
             this.TabCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EdtCodigo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GradeView)).BeginInit();
@@ -88,9 +89,11 @@
             // 
             // pnlFormulario
             // 
+            this.pnlFormulario.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.pnlFormulario.Controls.Add(this.PageFormulario);
             this.pnlFormulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFormulario.Location = new System.Drawing.Point(0, 0);
+            this.pnlFormulario.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlFormulario.Name = "pnlFormulario";
             this.pnlFormulario.Size = new System.Drawing.Size(625, 487);
             this.pnlFormulario.TabIndex = 0;
@@ -98,6 +101,7 @@
             // PageFormulario
             // 
             this.PageFormulario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PageFormulario.Font = new System.Drawing.Font("Tahoma", 10F);
             this.PageFormulario.Location = new System.Drawing.Point(2, 2);
             this.PageFormulario.Name = "PageFormulario";
             this.PageFormulario.SelectedTabPage = this.TabConsulta;
@@ -109,6 +113,10 @@
             // 
             // TabConsulta
             // 
+            this.TabConsulta.Appearance.HeaderActive.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.TabConsulta.Appearance.HeaderActive.ForeColor = System.Drawing.Color.Red;
+            this.TabConsulta.Appearance.HeaderActive.Options.UseFont = true;
+            this.TabConsulta.Appearance.HeaderActive.Options.UseForeColor = true;
             this.TabConsulta.Controls.Add(this.pnlGrade);
             this.TabConsulta.Controls.Add(this.BarraNavegacao);
             this.TabConsulta.Name = "TabConsulta";
@@ -117,39 +125,12 @@
             // 
             // pnlGrade
             // 
-            this.pnlGrade.Controls.Add(this.GradeDados);
             this.pnlGrade.Controls.Add(this.grpFiltro);
             this.pnlGrade.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrade.Location = new System.Drawing.Point(135, 0);
             this.pnlGrade.Name = "pnlGrade";
             this.pnlGrade.Size = new System.Drawing.Size(480, 455);
             this.pnlGrade.TabIndex = 2;
-            // 
-            // GradeDados
-            // 
-            this.GradeDados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GradeDados.Location = new System.Drawing.Point(2, 74);
-            this.GradeDados.MainView = this.bandedGridView1;
-            this.GradeDados.Name = "GradeDados";
-            this.GradeDados.Size = new System.Drawing.Size(476, 379);
-            this.GradeDados.TabIndex = 2;
-            this.GradeDados.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.bandedGridView1});
-            // 
-            // bandedGridView1
-            // 
-            this.bandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand1});
-            this.bandedGridView1.GridControl = this.GradeDados;
-            this.bandedGridView1.Name = "bandedGridView1";
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand1.Caption = "Informações da Consulta";
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.Width = 1043;
             // 
             // grpFiltro
             // 
@@ -313,6 +294,12 @@
             // 
             // TabCadastro
             // 
+            this.TabCadastro.Appearance.HeaderActive.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.TabCadastro.Appearance.HeaderActive.ForeColor = System.Drawing.Color.Red;
+            this.TabCadastro.Appearance.HeaderActive.Options.UseFont = true;
+            this.TabCadastro.Appearance.HeaderActive.Options.UseForeColor = true;
+            this.TabCadastro.Appearance.HeaderDisabled.ForeColor = System.Drawing.Color.Gray;
+            this.TabCadastro.Appearance.HeaderDisabled.Options.UseForeColor = true;
             this.TabCadastro.Controls.Add(this.panelControl2);
             this.TabCadastro.Controls.Add(this.panelControl1);
             this.TabCadastro.Name = "TabCadastro";
@@ -321,7 +308,11 @@
             // 
             // panelControl2
             // 
-            this.panelControl2.Controls.Add(this.EdtCodigo);
+            this.panelControl2.Controls.Add(this.buttonEdit1);
+            this.panelControl2.Controls.Add(this.textEdit3);
+            this.panelControl2.Controls.Add(this.labelControl4);
+            this.panelControl2.Controls.Add(this.labelControl3);
+            this.panelControl2.Controls.Add(this.textEdit1);
             this.panelControl2.Controls.Add(this.lblCodigo);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 44);
@@ -329,17 +320,48 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(615, 411);
             this.panelControl2.TabIndex = 3;
+            this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
-            // EdtCodigo
+            // buttonEdit1
             // 
-            this.EdtCodigo.Location = new System.Drawing.Point(86, 13);
-            this.EdtCodigo.Name = "EdtCodigo";
-            this.EdtCodigo.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.EdtCodigo.Properties.Appearance.Options.UseBackColor = true;
-            this.EdtCodigo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.EdtCodigo.Properties.ReadOnly = true;
-            this.EdtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.EdtCodigo.TabIndex = 1;
+            this.buttonEdit1.Location = new System.Drawing.Point(87, 60);
+            this.buttonEdit1.Name = "buttonEdit1";
+            this.buttonEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(185)))));
+            this.buttonEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.buttonEdit1.Size = new System.Drawing.Size(414, 20);
+            this.buttonEdit1.TabIndex = 6;
+            // 
+            // textEdit3
+            // 
+            this.textEdit3.Location = new System.Drawing.Point(87, 34);
+            this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Size = new System.Drawing.Size(100, 20);
+            this.textEdit3.TabIndex = 5;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(43, 42);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(37, 13);
+            this.labelControl4.TabIndex = 4;
+            this.labelControl4.Text = "Código:";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(43, 68);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(37, 13);
+            this.labelControl3.TabIndex = 2;
+            this.labelControl3.Text = "Código:";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(87, 8);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(100, 20);
+            this.textEdit1.TabIndex = 1;
             // 
             // lblCodigo
             // 
@@ -431,8 +453,6 @@
             this.TabConsulta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlGrade)).EndInit();
             this.pnlGrade.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GradeDados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpFiltro)).EndInit();
             this.grpFiltro.ResumeLayout(false);
             this.grpFiltro.PerformLayout();
@@ -443,7 +463,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EdtCodigo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GradeView)).EndInit();
@@ -469,13 +491,11 @@
         private DevExpress.XtraNavBar.NavBarGroup BarraOpcao;
         private DevExpress.XtraEditors.PanelControl pnlGrade;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.TextEdit EdtCodigo;
         private DevExpress.XtraEditors.LabelControl lblCodigo;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton BtnCancelar;
         private DevExpress.XtraEditors.SimpleButton btnSalvar;
         private DevExpress.XtraEditors.GroupControl grpFiltro;
-        private DevExpress.XtraGrid.GridControl GradeDados;
         private DevExpress.XtraGrid.Views.Grid.GridView GradeView;
         private DevExpress.XtraEditors.SimpleButton btnConsultar;
         private DevExpress.XtraEditors.ComboBoxEdit EdtTipo;
@@ -484,8 +504,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraNavBar.NavBarItem btnAgrupar;
         private DevExpress.XtraGrid.GridControl GradeControl;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView bandedGridView1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
+        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

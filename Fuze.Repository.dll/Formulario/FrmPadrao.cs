@@ -25,5 +25,10 @@ namespace Fuze.Repository.dll.Formulario
         {
 
         }
+
+        private void panelControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
