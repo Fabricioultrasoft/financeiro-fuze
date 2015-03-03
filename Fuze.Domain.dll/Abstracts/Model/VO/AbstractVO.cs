@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Fuze.Domain.dll.Abstracts.Model.VO
 {
+    [Serializable]
     public abstract class AbstractVO
     {
         public long Id { get; set; }

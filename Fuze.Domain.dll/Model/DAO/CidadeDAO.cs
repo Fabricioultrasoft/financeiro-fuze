@@ -41,5 +41,20 @@ namespace Fuze.Domain.dll.Model.DAO
         {
             throw new NotImplementedException();
         }
+
+        protected override string GetSQLConsulta(CidadeVO obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void CarregarParametro(CidadeVO obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void CarregarObjetoConsulta(CidadeVO clero)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
