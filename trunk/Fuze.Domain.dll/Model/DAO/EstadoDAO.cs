@@ -2,42 +2,42 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Fuze.Domain.dll.Abstracts.Model.VO;
 using Fuze.Domain.dll.Abstracts.Model.DAO;
 using System.Data.SqlClient;
 using Fuze.Domain.dll.Model.VO;
-using System.Data;
 
 namespace Fuze.Domain.dll.Model.DAO
 {
-    public class CleroDAO : AbstractDAO<CleroVO>
+    public class EstadoDAO : AbstractDAO<EstadoVO>
     {
-        public CleroDAO(SqlCommand sqlCommand)
+        public EstadoDAO(SqlCommand sqlCommand)
             : base(sqlCommand)
         {
 
         }
 
-        public override void Inserir(CleroVO obj)
+        public override void Inserir(EstadoVO obj)
         {
             throw new NotImplementedException();
         }
 
-        public override int Alterar(CleroVO obj)
+        public override int Alterar(EstadoVO obj)
         {
             throw new NotImplementedException();
         }
 
-        public override void Deletar(CleroVO obj)
+        public override void Deletar(EstadoVO obj)
         {
             throw new NotImplementedException();
         }
 
-        public override void Consultar(CleroVO obj)
+        public override void Consultar(EstadoVO obj)
         {
             throw new NotImplementedException();
         }
 
-        public override List<CleroVO> GetLista(CleroVO obj)
+        public override List<EstadoVO> GetLista(EstadoVO obj)
         {
             throw new NotImplementedException();
         }

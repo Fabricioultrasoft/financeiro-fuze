@@ -7,7 +7,7 @@ using Fuze.Domain.dll.Abstracts.Model.VO;
 
 namespace Fuze.Domain.dll.Abstracts.Model.DAO
 {
-    public abstract class AbstractDAO
+    public abstract class AbstractDAO<T>
     {
         private SqlCommand sqlCommand;
         private SqlDataReader sqlDataReader;
@@ -87,5 +87,11 @@ namespace Fuze.Domain.dll.Abstracts.Model.DAO
                 SetSqlDataReader(null);
             }
         }
+
+        public abstract void Inserir(T obj);
+        public abstract int Alterar(T obj);
+        public abstract void Deletar(T obj);
+        public abstract void Consultar(T obj);
+        public abstract List<T> GetLista(T obj);
     }
 }

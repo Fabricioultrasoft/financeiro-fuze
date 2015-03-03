@@ -2,42 +2,42 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Fuze.Domain.dll.Abstracts.Model.VO;
 using Fuze.Domain.dll.Abstracts.Model.DAO;
-using System.Data.SqlClient;
 using Fuze.Domain.dll.Model.VO;
-using System.Data;
+using System.Data.SqlClient;
 
 namespace Fuze.Domain.dll.Model.DAO
 {
-    public class CleroDAO : AbstractDAO<CleroVO>
+    public class FeriadoTipoDAO : AbstractDAO<FeriadoTipoVO>
     {
-        public CleroDAO(SqlCommand sqlCommand)
+        public FeriadoTipoDAO(SqlCommand sqlCommand)
             : base(sqlCommand)
         {
 
         }
 
-        public override void Inserir(CleroVO obj)
+        public override void Inserir(FeriadoTipoVO obj)
         {
             throw new NotImplementedException();
         }
 
-        public override int Alterar(CleroVO obj)
+        public override int Alterar(FeriadoTipoVO obj)
         {
             throw new NotImplementedException();
         }
 
-        public override void Deletar(CleroVO obj)
+        public override void Deletar(FeriadoTipoVO obj)
         {
             throw new NotImplementedException();
         }
 
-        public override void Consultar(CleroVO obj)
+        public override void Consultar(FeriadoTipoVO obj)
         {
             throw new NotImplementedException();
         }
 
-        public override List<CleroVO> GetLista(CleroVO obj)
+        public override List<FeriadoTipoVO> GetLista(FeriadoTipoVO obj)
         {
             throw new NotImplementedException();
         }
