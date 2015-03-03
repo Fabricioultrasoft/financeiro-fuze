@@ -35,6 +35,9 @@
     <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -49,6 +52,12 @@
   <ItemGroup>
     <Compile Include="Formulario\AbsctractForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmPadrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmPadrao.Designer.cs">
+      <DependentUpon>FrmPadrao.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulario\Mensagem.cs">
       <SubType>Form</SubType>
@@ -65,6 +74,9 @@
     <Compile Include="Validacao\Validacao.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formulario\FrmPadrao.resx">
+      <DependentUpon>FrmPadrao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulario\Mensagem.resx">
       <DependentUpon>Mensagem.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +92,8 @@
     <Content Include="Icone\info.png" />
     <Content Include="Icone\question.png" />
     <Content Include="Icone\warning.png" />
+    <None Include="Resources\Alterar.bmp" />
+    <None Include="Resources\Incluir.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

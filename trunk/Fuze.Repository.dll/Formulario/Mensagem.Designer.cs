@@ -30,10 +30,10 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMsgTopo = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblinfoErro = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -51,11 +51,22 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel1.Controls.Add(this.lblinfoErro);
+            this.panel1.Controls.Add(this.lblMsgTopo);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(651, 36);
             this.panel1.TabIndex = 1;
+            // 
+            // lblMsgTopo
+            // 
+            this.lblMsgTopo.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.lblMsgTopo.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lblMsgTopo.Location = new System.Drawing.Point(11, 5);
+            this.lblMsgTopo.Name = "lblMsgTopo";
+            this.lblMsgTopo.Size = new System.Drawing.Size(89, 24);
+            this.lblMsgTopo.TabIndex = 0;
+            this.lblMsgTopo.Text = "ERRO 21";
+            this.lblMsgTopo.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // label1
             // 
@@ -78,24 +89,13 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.btnOk);
             this.panel2.Location = new System.Drawing.Point(0, 204);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(437, 33);
             this.panel2.TabIndex = 4;
-            // 
-            // lblinfoErro
-            // 
-            this.lblinfoErro.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            this.lblinfoErro.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.lblinfoErro.Location = new System.Drawing.Point(11, 5);
-            this.lblinfoErro.Name = "lblinfoErro";
-            this.lblinfoErro.Size = new System.Drawing.Size(89, 24);
-            this.lblinfoErro.TabIndex = 0;
-            this.lblinfoErro.Text = "ERRO 21";
-            this.lblinfoErro.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // Mensagem
             // 
@@ -126,6 +126,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraEditors.LabelControl lblinfoErro;
+        private DevExpress.XtraEditors.LabelControl lblMsgTopo;
     }
 }
