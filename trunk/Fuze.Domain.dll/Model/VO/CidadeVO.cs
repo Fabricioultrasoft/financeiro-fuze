@@ -6,6 +6,7 @@ using Fuze.Domain.dll.Abstracts.Model.VO;
 
 namespace Fuze.Domain.dll.Model.VO
 {
+    [Serializable]
     public class CidadeVO : AbstractVO
     {
         public string Nome { get; set; }
