@@ -8,7 +8,7 @@ using System.Xml;
 
 namespace Fuze.Domain.dll.Abstracts.Controller.BE
 {
-    public abstract class AbstractBE
+    public abstract class AbstractBE<T>
     {
         private SqlConnection sqlConnection;
         private SqlTransaction sqlTransaction;
@@ -195,5 +195,11 @@ namespace Fuze.Domain.dll.Abstracts.Controller.BE
                 throw new Exception(e.Message);
             }
         }
+
+        public abstract void Inserir(T obj);
+        public abstract int Alterar(T obj);
+        public abstract void Deletar(T obj);
+        public abstract void Consultar(T obj);
+        public abstract List<T> GetLista(T obj);
     }
 }

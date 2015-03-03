@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using FuzeFinanceiro.View.Clero;
 
 namespace FuzeFinanceiro
 {
@@ -16,7 +15,7 @@ namespace FuzeFinanceiro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCleroEdicao());
+            //Application.Run(new FrmCleroEdicao());
         }
     }
 }

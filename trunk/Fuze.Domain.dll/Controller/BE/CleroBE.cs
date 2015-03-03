@@ -9,7 +9,7 @@ using Fuze.Domain.dll.Model.DAO;
 
 namespace Fuze.Domain.dll.Controller.BE
 {
-    public class CleroBE : AbstractBE
+    public class CleroBE : AbstractBE<CleroVO>
     {
         public CleroBE()
             : base()
@@ -21,132 +21,29 @@ namespace Fuze.Domain.dll.Controller.BE
         {
         }
 
-        private void CampoObrigatorio(CleroVO clero)
+        public override void Inserir(CleroVO obj)
         {
-            if (string.IsNullOrEmpty(clero.Descricao))
-                throw new Exception("Por favor preencha o campo Descrição");
+            throw new NotImplementedException();
         }
 
-        public void Inserir(CleroVO clero)
+        public override int Alterar(CleroVO obj)
         {
-            CleroDAO dao = null;
-            try
-            {
-                if (clero != null)
-                {
-                    CampoObrigatorio(clero);
-
-                    dao = new CleroDAO(GetSqlCommand());
-
-                    BeginTransaction();
-                    dao.Inserir(clero);
-                    Commit();
-                }
-            }
-            catch (Exception e)
-            {
-                Rollback();
-                throw e;
-            }
-            finally
-            {
-                dao = null;
-            }
+            throw new NotImplementedException();
         }
 
-        public void Alterar(CleroVO clero)
+        public override void Deletar(CleroVO obj)
         {
-            CleroDAO dao = null;
-            try
-            {
-                if (clero != null)
-                {
-                    CampoObrigatorio(clero);
-
-                    dao = new CleroDAO(GetSqlCommand());
-
-                    BeginTransaction();
-                    dao.Alterar(clero);
-                    Commit();
-                }
-            }
-            catch (Exception e)
-            {
-                Rollback();
-                throw e;
-            }
-            finally
-            {
-                dao = null;
-            }
+            throw new NotImplementedException();
         }
 
-        public void Deletar(CleroVO clero)
+        public override void Consultar(CleroVO obj)
         {
-            CleroDAO dao = null;
-            try
-            {
-                if (clero != null)
-                {   
-                    dao = new CleroDAO(GetSqlCommand());
-
-                    BeginTransaction();
-                    dao.Deletar(clero);
-                    Commit();
-                }
-            }
-            catch (Exception e)
-            {
-                Rollback();
-                throw e;
-            }
-            finally
-            {
-                dao = null;
-            }
+            throw new NotImplementedException();
         }
 
-        public void Consultar(CleroVO clero)
+        public override List<CleroVO> GetLista(CleroVO obj)
         {
-            CleroDAO dao = null;
-            try
-            {
-                if (clero != null)
-                {
-                    dao = new CleroDAO(GetSqlCommand());
-                    dao.Consultar(clero);
-                }
-            }
-            catch (Exception e)
-            {   
-                throw e;
-            }
-            finally
-            {
-                dao = null;
-            }
-        }
-
-        public List<CleroVO> GetLista(CleroVO clero)
-        {
-            CleroDAO dao = null;
-            try
-            {
-                if (clero != null)
-                {
-                    dao = new CleroDAO(GetSqlCommand());
-                    return dao.GetLista(clero);
-                }
-                return new List<CleroVO>();
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally
-            {
-                dao = null;
-            }
+            throw new NotImplementedException();
         }
     }
 }
