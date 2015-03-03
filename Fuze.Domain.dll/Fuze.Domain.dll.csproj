@@ -55,9 +55,16 @@
     <Compile Include="Model\VO\FeriadoTipoVO.cs" />
     <Compile Include="Model\VO\FeriadoVO.cs" />
     <Compile Include="Model\VO\PaisVO.cs" />
+    <Compile Include="Model\VO\PessoaEnderecoDigitalTipoVO.cs" />
+    <Compile Include="Model\VO\PessoaEnderecoTipoVO.cs" />
     <Compile Include="Model\VO\PessoaEnderecoVO.cs" />
+    <Compile Include="Model\VO\PessoaJuridicaVO.cs" />
+    <Compile Include="Model\VO\PessoaTelefoneTipoVO.cs" />
     <Compile Include="Model\VO\PessoaTipoVO.cs" />
     <Compile Include="Model\VO\PessoaVO.cs" />
+    <Compile Include="Model\VO\PesssoaEnderecoDigitalVO.cs" />
+    <Compile Include="Model\VO\SexoVO.cs" />
+    <Compile Include="Model\VO\TipoDocumentoFotoVO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

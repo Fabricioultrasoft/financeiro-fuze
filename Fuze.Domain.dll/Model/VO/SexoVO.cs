@@ -6,11 +6,13 @@ using Fuze.Domain.dll.Abstracts.Model.VO;
 
 namespace Fuze.Domain.dll.Model.VO
 {
-    public class FeriadoTipoVO : AbstractVO
+    [Serializable]
+    public class SexoVO : AbstractVO
     {
-        public string Nome { get; set; }
-        
-        public FeriadoTipoVO()
+        public string Descricao { get; set; }
+        public string Sigla { get; set; }
+
+        public SexoVO()
         {
 
         }
