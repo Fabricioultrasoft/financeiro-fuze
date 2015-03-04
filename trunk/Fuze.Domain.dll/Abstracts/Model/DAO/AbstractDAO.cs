@@ -93,7 +93,7 @@ namespace Fuze.Domain.dll.Abstracts.Model.DAO
         public abstract void Deletar(T obj);
         protected abstract string GetSQLConsulta(T obj);
         protected abstract void CarregarParametro(T obj);
-        protected abstract void CarregarObjetoConsulta(T clero);
+        protected abstract void CarregarObjetoConsulta(T obj);
         public abstract void Consultar(T obj);
         public abstract List<T> GetLista(T obj);
     }
