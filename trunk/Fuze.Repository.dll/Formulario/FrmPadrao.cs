@@ -16,19 +16,9 @@ namespace Fuze.Repository.dll.Formulario
             InitializeComponent();
         }
 
-        private void BarraNavegacao_Click(object sender, EventArgs e)
+        private void btnIncluir_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-
-        }
-
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelControl2_Paint(object sender, PaintEventArgs e)
-        {
-
+            PageFormulario.SelectedTabPage = TabCadastro;
         }
     }
 }
