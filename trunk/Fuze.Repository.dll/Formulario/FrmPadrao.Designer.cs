@@ -125,6 +125,7 @@
             // 
             // pnlGrade
             // 
+            this.pnlGrade.AccessibleDescription = "";
             this.pnlGrade.Controls.Add(this.grpFiltro);
             this.pnlGrade.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrade.Location = new System.Drawing.Point(135, 0);
@@ -230,7 +231,6 @@
             this.BarraNavegacao.TabIndex = 0;
             this.BarraNavegacao.Text = "navBarControl1";
             this.BarraNavegacao.View = new DevExpress.XtraNavBar.ViewInfo.XPExplorerBarViewInfoRegistrator();
-            
             // 
             // BarraAcao
             // 
@@ -321,7 +321,6 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(615, 411);
             this.panelControl2.TabIndex = 3;
-            
             // 
             // buttonEdit1
             // 
@@ -490,8 +489,6 @@
         private DevExpress.XtraNavBar.NavBarItem btnFiltro;
         private DevExpress.XtraNavBar.NavBarItem btnSair;
         private DevExpress.XtraNavBar.NavBarGroup BarraOpcao;
-        private DevExpress.XtraEditors.PanelControl pnlGrade;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.LabelControl lblCodigo;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton BtnCancelar;
@@ -511,5 +508,7 @@
         private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        public DevExpress.XtraEditors.PanelControl pnlGrade;
+        public DevExpress.XtraEditors.PanelControl panelControl2;
     }
 }
