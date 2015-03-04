@@ -230,7 +230,7 @@
             this.BarraNavegacao.TabIndex = 0;
             this.BarraNavegacao.Text = "navBarControl1";
             this.BarraNavegacao.View = new DevExpress.XtraNavBar.ViewInfo.XPExplorerBarViewInfoRegistrator();
-            this.BarraNavegacao.Click += new System.EventHandler(this.BarraNavegacao_Click);
+            
             // 
             // BarraAcao
             // 
@@ -252,6 +252,7 @@
             this.btnIncluir.Caption = "Incluir";
             this.btnIncluir.Name = "btnIncluir";
             this.btnIncluir.SmallImageIndex = 0;
+            this.btnIncluir.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnIncluir_LinkClicked);
             // 
             // btnAlterar
             // 
@@ -320,7 +321,7 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(615, 411);
             this.panelControl2.TabIndex = 3;
-            this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
+            
             // 
             // buttonEdit1
             // 
