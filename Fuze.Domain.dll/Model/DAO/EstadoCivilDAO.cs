@@ -52,7 +52,7 @@ namespace Fuze.Domain.dll.Model.DAO
             throw new NotImplementedException();
         }
 
-        protected override void CarregarObjetoConsulta(EstadoCivilVO clero)
+        protected override void CarregarObjetoConsulta(EstadoCivilVO obj)
         {
             throw new NotImplementedException();
         }

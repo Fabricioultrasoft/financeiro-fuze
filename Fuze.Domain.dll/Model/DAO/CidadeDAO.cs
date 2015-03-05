@@ -6,6 +6,7 @@ using Fuze.Domain.dll.Abstracts.Model.VO;
 using System.Data.SqlClient;
 using Fuze.Domain.dll.Abstracts.Model.DAO;
 using Fuze.Domain.dll.Model.VO;
+using System.Data;
 
 namespace Fuze.Domain.dll.Model.DAO
 {
@@ -34,27 +35,123 @@ namespace Fuze.Domain.dll.Model.DAO
 
         public override void Consultar(CidadeVO obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                GetSqlCommand().CommandText = "";
+                GetSqlCommand().CommandText = GetSQLConsulta(obj);
+                CarregarParametro(obj);
+
+                if (GetSqlDataReader().Read())
+                    CarregarObjetoConsulta(obj);
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Não foi possível Consultar dados na Tabela Cidade", e);
+            }
+            finally
+            {
+                Close();
+            }
         }
 
         public override List<CidadeVO> GetLista(CidadeVO obj)
         {
-            throw new NotImplementedException();
+            List<CidadeVO> lista = null;
+            CidadeVO objeto = null;
+            try
+            {
+                GetSqlCommand().CommandText = "";
+                GetSqlCommand().CommandText = GetSQLConsulta(obj);
+                CarregarParametro(obj);
+
+                lista = new List<CidadeVO>();
+
+                while (GetSqlDataReader().Read())
+                {
+                    objeto = new CidadeVO();
+                    CarregarObjetoConsulta(objeto);
+                    lista.Add(objeto);
+                }
+
+                return lista;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Não foi possível Consultar dados na Tabela Cidade", e);
+            }
+            finally
+            {
+                Close();
+            }
         }
 
         protected override string GetSQLConsulta(CidadeVO obj)
         {
-            throw new NotImplementedException();
+            StringBuilder sb = null;
+            try
+            {
+                sb = new StringBuilder();
+                sb.AppendLine(" SELECT DBFuze.dbo.Cidade.CodigoIbge ");
+                sb.AppendLine(" 	 , DBFuze.dbo.Cidade.IdEstado   ");
+                sb.AppendLine(" 	 , DBFuze.dbo.Cidade.Nome       ");
+                sb.AppendLine("   FROM DBFuze.dbo.Cidade            ");
+                sb.AppendLine("  WHERE 1 = 1                        ");
+
+                if (obj.Id > 0)
+                    sb.AppendLine(@" AND DBFuze.dbo.Cidade.CodigoIbge = @CodigoIbge ");
+
+                if (obj.Estado.Id > 0)
+                    sb.AppendLine(@" AND DBFuze.dbo.Clero.DescricaoDBFuze.dbo.Cidade.IdEstado = @IdEstado ");
+
+                return sb.ToString();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                sb = null;
+            }
         }
 
         protected override void CarregarParametro(CidadeVO obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                GetSqlCommand().Parameters.Clear();
+
+                if (obj.Id > 0)
+                    GetSqlCommand().Parameters.Add("CodigoIbge", SqlDbType.Int).Value = obj.Id;
+
+                if (obj.Estado.Id > 0)
+                    GetSqlCommand().Parameters.Add("IdEstado", SqlDbType.Int).Value = obj.Estado.Id;
+            }
+            catch (Exception e)
+            {   
+                throw e;
+            }
+            
         }
 
-        protected override void CarregarObjetoConsulta(CidadeVO clero)
+        protected override void CarregarObjetoConsulta(CidadeVO obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (!(GetSqlDataReader().IsDBNull(GetSqlDataReader().GetOrdinal("CodigoIbge"))))
+                    obj.Id = Convert.ToInt64(GetSqlDataReader()["CodigoIbge"]);
+
+                if (!(GetSqlDataReader().IsDBNull(GetSqlDataReader().GetOrdinal("IdEstado"))))
+                    obj.Estado.Id = Convert.ToInt64(GetSqlDataReader()["IdEstado"]);
+
+                if (!(GetSqlDataReader().IsDBNull(GetSqlDataReader().GetOrdinal("Nome"))))
+                    obj.Nome = Convert.ToString(GetSqlDataReader()["Nome"]);
+            }
+            catch (Exception e)
+            {   
+                throw e;
+            }
         }
     }
 }
