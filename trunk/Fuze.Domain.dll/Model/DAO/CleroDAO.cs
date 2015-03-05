@@ -157,15 +157,15 @@ namespace Fuze.Domain.dll.Model.DAO
             }
         }
 
-        protected override void CarregarObjetoConsulta(CleroVO clero)
+        protected override void CarregarObjetoConsulta(CleroVO obj)
         {
             try
             {
                 if (!(GetSqlDataReader().IsDBNull(GetSqlDataReader().GetOrdinal("IdClero"))))
-                    clero.Id = Convert.ToInt32(GetSqlDataReader()["IdClero"]);
+                    obj.Id = Convert.ToInt64(GetSqlDataReader()["IdClero"]);
 
                 if (!(GetSqlDataReader().IsDBNull(GetSqlDataReader().GetOrdinal("Descricao"))))
-                    clero.Descricao = Convert.ToString(GetSqlDataReader()["Descricao"]);
+                    obj.Descricao = Convert.ToString(GetSqlDataReader()["Descricao"]);
             }
             catch (Exception e)
             {
