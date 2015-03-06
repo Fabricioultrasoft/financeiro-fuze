@@ -23,27 +23,125 @@ namespace Fuze.Domain.dll.Controller.BE
 
         public override void Inserir(CleroVO obj)
         {
-            throw new NotImplementedException();
+            CleroDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new CleroDAO(GetSqlCommand());
+
+                    BeginTransaction();
+                    dao.Inserir(obj);
+                    Commit();
+                }
+            }
+            catch (Exception e)
+            {
+                Rollback();
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override int Alterar(CleroVO obj)
         {
-            throw new NotImplementedException();
+            CleroDAO dao = null;
+            int id = 0;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new CleroDAO(GetSqlCommand());
+
+                    BeginTransaction();
+                    id = dao.Alterar(obj);
+                    Commit();
+
+                    return id;
+                }
+
+                return 0;
+            }
+            catch (Exception e)
+            {
+                Rollback();
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override void Deletar(CleroVO obj)
         {
-            throw new NotImplementedException();
+            CleroDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new CleroDAO(GetSqlCommand());
+
+                    BeginTransaction();
+                    dao.Deletar(obj);
+                    Commit();
+                }
+            }
+            catch (Exception e)
+            {
+                Rollback();
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override void Consultar(CleroVO obj)
         {
-            throw new NotImplementedException();
+            CleroDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new CleroDAO(GetSqlCommand());
+                    dao.Consultar(obj);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override List<CleroVO> GetLista(CleroVO obj)
         {
-            throw new NotImplementedException();
+            CleroDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new CleroDAO(GetSqlCommand());
+                    return dao.GetLista(obj);
+                }
+                return new List<CleroVO>();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
     }
 }
