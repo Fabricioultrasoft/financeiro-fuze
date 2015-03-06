@@ -33,7 +33,9 @@
             this.PageFormulario = new DevExpress.XtraTab.XtraTabControl();
             this.TabConsulta = new DevExpress.XtraTab.XtraTabPage();
             this.pnlGrade = new DevExpress.XtraEditors.PanelControl();
-            this.grpFiltro = new DevExpress.XtraEditors.GroupControl();
+            this.GradeControle = new DevExpress.XtraGrid.GridControl();
+            this.GradeView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.pnlFiltro = new DevExpress.XtraEditors.GroupControl();
             this.btnConsultar = new DevExpress.XtraEditors.SimpleButton();
             this.EdtTipo = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -59,9 +61,6 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.BtnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
-            this.GradeView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.GradeControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.pnlFormulario)).BeginInit();
             this.pnlFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PageFormulario)).BeginInit();
@@ -69,8 +68,10 @@
             this.TabConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlGrade)).BeginInit();
             this.pnlGrade.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpFiltro)).BeginInit();
-            this.grpFiltro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GradeControle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GradeView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlFiltro)).BeginInit();
+            this.pnlFiltro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EdtTipo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EdtTexto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarraNavegacao)).BeginInit();
@@ -82,9 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GradeView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GradeControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlFormulario
@@ -125,33 +123,51 @@
             // 
             // pnlGrade
             // 
-            this.pnlGrade.AccessibleDescription = "";
-            this.pnlGrade.Controls.Add(this.grpFiltro);
+            this.pnlGrade.Controls.Add(this.GradeControle);
+            this.pnlGrade.Controls.Add(this.pnlFiltro);
             this.pnlGrade.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrade.Location = new System.Drawing.Point(135, 0);
             this.pnlGrade.Name = "pnlGrade";
             this.pnlGrade.Size = new System.Drawing.Size(480, 455);
             this.pnlGrade.TabIndex = 2;
             // 
-            // grpFiltro
+            // GradeControle
             // 
-            this.grpFiltro.Appearance.BackColor = System.Drawing.Color.White;
-            this.grpFiltro.Appearance.BorderColor = System.Drawing.Color.Red;
-            this.grpFiltro.Appearance.Options.UseBackColor = true;
-            this.grpFiltro.Appearance.Options.UseBorderColor = true;
-            this.grpFiltro.Appearance.Options.UseFont = true;
-            this.grpFiltro.Controls.Add(this.btnConsultar);
-            this.grpFiltro.Controls.Add(this.EdtTipo);
-            this.grpFiltro.Controls.Add(this.labelControl2);
-            this.grpFiltro.Controls.Add(this.EdtTexto);
-            this.grpFiltro.Controls.Add(this.labelControl1);
-            this.grpFiltro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpFiltro.Location = new System.Drawing.Point(2, 2);
-            this.grpFiltro.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.grpFiltro.Name = "grpFiltro";
-            this.grpFiltro.Size = new System.Drawing.Size(476, 72);
-            this.grpFiltro.TabIndex = 1;
-            this.grpFiltro.Text = "Filtro de Consulta";
+            this.GradeControle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GradeControle.Location = new System.Drawing.Point(2, 74);
+            this.GradeControle.MainView = this.GradeView;
+            this.GradeControle.Name = "GradeControle";
+            this.GradeControle.Size = new System.Drawing.Size(476, 379);
+            this.GradeControle.TabIndex = 2;
+            this.GradeControle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.GradeView});
+            // 
+            // GradeView
+            // 
+            this.GradeView.GridControl = this.GradeControle;
+            this.GradeView.Name = "GradeView";
+            this.GradeView.OptionsView.ShowGroupPanel = false;
+            // 
+            // pnlFiltro
+            // 
+            this.pnlFiltro.Appearance.BackColor = System.Drawing.Color.White;
+            this.pnlFiltro.Appearance.BorderColor = System.Drawing.Color.Red;
+            this.pnlFiltro.Appearance.Options.UseBackColor = true;
+            this.pnlFiltro.Appearance.Options.UseBorderColor = true;
+            this.pnlFiltro.Appearance.Options.UseFont = true;
+            this.pnlFiltro.Controls.Add(this.btnConsultar);
+            this.pnlFiltro.Controls.Add(this.EdtTipo);
+            this.pnlFiltro.Controls.Add(this.labelControl2);
+            this.pnlFiltro.Controls.Add(this.EdtTexto);
+            this.pnlFiltro.Controls.Add(this.labelControl1);
+            this.pnlFiltro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFiltro.Location = new System.Drawing.Point(2, 2);
+            this.pnlFiltro.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnlFiltro.Name = "pnlFiltro";
+            this.pnlFiltro.Size = new System.Drawing.Size(476, 72);
+            this.pnlFiltro.TabIndex = 1;
+            this.pnlFiltro.Text = "Filtro de Consulta";
+            this.pnlFiltro.Visible = false;
             // 
             // btnConsultar
             // 
@@ -231,6 +247,7 @@
             this.BarraNavegacao.TabIndex = 0;
             this.BarraNavegacao.Text = "navBarControl1";
             this.BarraNavegacao.View = new DevExpress.XtraNavBar.ViewInfo.XPExplorerBarViewInfoRegistrator();
+            this.BarraNavegacao.Click += new System.EventHandler(this.BarraNavegacao_Click);
             // 
             // BarraAcao
             // 
@@ -259,6 +276,7 @@
             this.btnAlterar.Caption = "Alterar";
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnAlterar.SmallImage")));
+            this.btnAlterar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnAlterar_LinkClicked);
             // 
             // btnExcluir
             // 
@@ -280,18 +298,21 @@
             // 
             this.btnAgrupar.Caption = "Agrupar";
             this.btnAgrupar.Name = "btnAgrupar";
+            this.btnAgrupar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnAgrupar_LinkClicked);
             // 
             // btnFiltro
             // 
             this.btnFiltro.Caption = "Filtro";
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnFiltro.SmallImage")));
+            this.btnFiltro.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnFiltro_LinkClicked);
             // 
             // btnSair
             // 
             this.btnSair.Caption = "Sair";
             this.btnSair.Name = "btnSair";
             this.btnSair.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnSair.SmallImage")));
+            this.btnSair.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnSair_LinkClicked);
             // 
             // TabCadastro
             // 
@@ -303,9 +324,13 @@
             this.TabCadastro.Appearance.HeaderDisabled.Options.UseForeColor = true;
             this.TabCadastro.Controls.Add(this.panelControl2);
             this.TabCadastro.Controls.Add(this.panelControl1);
+            this.TabCadastro.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.TabCadastro.Name = "TabCadastro";
+            this.TabCadastro.PageEnabled = false;
+            this.TabCadastro.PageVisible = false;
             this.TabCadastro.Size = new System.Drawing.Size(615, 455);
             this.TabCadastro.Text = "Cadastro";
+            this.TabCadastro.TooltipIconType = DevExpress.Utils.ToolTipIconType.Asterisk;
             // 
             // panelControl2
             // 
@@ -402,6 +427,7 @@
             this.BtnCancelar.Size = new System.Drawing.Size(102, 38);
             this.BtnCancelar.TabIndex = 1;
             this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -415,28 +441,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(102, 38);
             this.btnSalvar.TabIndex = 0;
             this.btnSalvar.Text = "Salvar";
-            // 
-            // GradeView
-            // 
-            this.GradeView.GridControl = this.GradeControl;
-            this.GradeView.Name = "GradeView";
-            // 
-            // GradeControl
-            // 
-            this.GradeControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GradeControl.Location = new System.Drawing.Point(2, 74);
-            this.GradeControl.MainView = this.GradeView;
-            this.GradeControl.Name = "GradeControl";
-            this.GradeControl.Size = new System.Drawing.Size(476, 379);
-            this.GradeControl.TabIndex = 2;
-            this.GradeControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.GradeView,
-            this.gridView});
-            // 
-            // gridView
-            // 
-            this.gridView.GridControl = this.GradeControl;
-            this.gridView.Name = "gridView";
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // FrmPadrao
             // 
@@ -453,9 +458,11 @@
             this.TabConsulta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlGrade)).EndInit();
             this.pnlGrade.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grpFiltro)).EndInit();
-            this.grpFiltro.ResumeLayout(false);
-            this.grpFiltro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GradeControle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GradeView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlFiltro)).EndInit();
+            this.pnlFiltro.ResumeLayout(false);
+            this.pnlFiltro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EdtTipo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EdtTexto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarraNavegacao)).EndInit();
@@ -468,9 +475,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GradeView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GradeControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -489,26 +493,25 @@
         private DevExpress.XtraNavBar.NavBarItem btnFiltro;
         private DevExpress.XtraNavBar.NavBarItem btnSair;
         private DevExpress.XtraNavBar.NavBarGroup BarraOpcao;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.LabelControl lblCodigo;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton BtnCancelar;
         private DevExpress.XtraEditors.SimpleButton btnSalvar;
-        private DevExpress.XtraEditors.GroupControl grpFiltro;
-        private DevExpress.XtraGrid.Views.Grid.GridView GradeView;
-        private DevExpress.XtraEditors.SimpleButton btnConsultar;
-        private DevExpress.XtraEditors.ComboBoxEdit EdtTipo;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit EdtTexto;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraNavBar.NavBarItem btnAgrupar;
-        private DevExpress.XtraGrid.GridControl GradeControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
         private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        public DevExpress.XtraEditors.PanelControl pnlGrade;
-        public DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.PanelControl pnlGrade;
+        private DevExpress.XtraEditors.GroupControl pnlFiltro;
+        private DevExpress.XtraEditors.SimpleButton btnConsultar;
+        private DevExpress.XtraEditors.ComboBoxEdit EdtTipo;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit EdtTexto;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraGrid.GridControl GradeControle;
+        private DevExpress.XtraGrid.Views.Grid.GridView GradeView;
     }
 }
