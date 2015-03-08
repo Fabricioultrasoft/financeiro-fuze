@@ -23,27 +23,125 @@ namespace Fuze.Domain.dll.Controller.BE
 
         public override void Inserir(TipoDocumentoFotoVO obj)
         {
-            throw new NotImplementedException();
+            TipoDocumentoFotoDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new TipoDocumentoFotoDAO(GetSqlCommand());
+
+                    BeginTransaction();
+                    dao.Inserir(obj);
+                    Commit();
+                }
+            }
+            catch (Exception e)
+            {
+                Rollback();
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override int Alterar(TipoDocumentoFotoVO obj)
         {
-            throw new NotImplementedException();
+            TipoDocumentoFotoDAO dao = null;
+            int id = 0;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new TipoDocumentoFotoDAO(GetSqlCommand());
+
+                    BeginTransaction();
+                    id = dao.Alterar(obj);
+                    Commit();
+
+                    return id;
+                }
+
+                return 0;
+            }
+            catch (Exception e)
+            {
+                Rollback();
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override void Deletar(TipoDocumentoFotoVO obj)
         {
-            throw new NotImplementedException();
+            TipoDocumentoFotoDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new TipoDocumentoFotoDAO(GetSqlCommand());
+
+                    BeginTransaction();
+                    dao.Deletar(obj);
+                    Commit();
+                }
+            }
+            catch (Exception e)
+            {
+                Rollback();
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override void Consultar(TipoDocumentoFotoVO obj)
         {
-            throw new NotImplementedException();
+            TipoDocumentoFotoDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new TipoDocumentoFotoDAO(GetSqlCommand());
+                    dao.Consultar(obj);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override List<TipoDocumentoFotoVO> GetLista(TipoDocumentoFotoVO obj)
         {
-            throw new NotImplementedException();
+            TipoDocumentoFotoDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new TipoDocumentoFotoDAO(GetSqlCommand());
+                    return dao.GetLista(obj);
+                }
+                return new List<TipoDocumentoFotoVO>();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
     }
 }

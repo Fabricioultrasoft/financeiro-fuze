@@ -23,27 +23,125 @@ namespace Fuze.Domain.dll.Controller.BE
 
         public override void Inserir(FeriadoVO obj)
         {
-            throw new NotImplementedException();
+            FeriadoDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new FeriadoDAO(GetSqlCommand());
+
+                    BeginTransaction();
+                    dao.Inserir(obj);
+                    Commit();
+                }
+            }
+            catch (Exception e)
+            {
+                Rollback();
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override int Alterar(FeriadoVO obj)
         {
-            throw new NotImplementedException();
+            FeriadoDAO dao = null;
+            int id = 0;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new FeriadoDAO(GetSqlCommand());
+
+                    BeginTransaction();
+                    id = dao.Alterar(obj);
+                    Commit();
+
+                    return id;
+                }
+
+                return 0;
+            }
+            catch (Exception e)
+            {
+                Rollback();
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override void Deletar(FeriadoVO obj)
         {
-            throw new NotImplementedException();
+            FeriadoDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new FeriadoDAO(GetSqlCommand());
+
+                    BeginTransaction();
+                    dao.Deletar(obj);
+                    Commit();
+                }
+            }
+            catch (Exception e)
+            {
+                Rollback();
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override void Consultar(FeriadoVO obj)
         {
-            throw new NotImplementedException();
+            FeriadoDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new FeriadoDAO(GetSqlCommand());
+                    dao.Consultar(obj);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
 
         public override List<FeriadoVO> GetLista(FeriadoVO obj)
         {
-            throw new NotImplementedException();
+            FeriadoDAO dao = null;
+            try
+            {
+                if (obj != null)
+                {
+                    dao = new FeriadoDAO(GetSqlCommand());
+                    return dao.GetLista(obj);
+                }
+                return new List<FeriadoVO>();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                dao = null;
+            }
         }
     }
 }
