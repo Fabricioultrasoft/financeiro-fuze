@@ -15,7 +15,13 @@ namespace FuzeFinanceiro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmTeste());
+            //Application.Run(new FrmLogin());
+            FrmLogin login = new FrmLogin();
+            if (login.ShowDialog() == DialogResult.OK)
+                Application.Run(new FrmPrincipal());
+
+
+
         }
     }
 }
