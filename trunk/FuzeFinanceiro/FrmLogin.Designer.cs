@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEntrar = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
@@ -50,6 +50,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(499, 400);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnEntrar
             // 
@@ -64,17 +65,6 @@
             this.btnEntrar.TabIndex = 1;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ImageIndex = 68;
-            this.simpleButton2.ImageList = this.ribbonImageCollection;
-            this.simpleButton2.Location = new System.Drawing.Point(279, 321);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(88, 29);
-            this.simpleButton2.TabIndex = 2;
-            this.simpleButton2.Text = "Cancelar";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // ribbonImageCollection
             // 
@@ -151,6 +141,17 @@
             this.ribbonImageCollection.Images.SetKeyName(69, "006 Ok.png");
             this.ribbonImageCollection.Images.SetKeyName(70, "007 Filtrar.png");
             this.ribbonImageCollection.Images.SetKeyName(71, "008 Sair.png");
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageIndex = 68;
+            this.simpleButton2.ImageList = this.ribbonImageCollection;
+            this.simpleButton2.Location = new System.Drawing.Point(279, 321);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(88, 29);
+            this.simpleButton2.TabIndex = 2;
+            this.simpleButton2.Text = "Cancelar";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // ribbonImageCollectionLarge
             // 
