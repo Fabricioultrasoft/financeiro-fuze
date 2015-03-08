@@ -50,14 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formulario\AbsctractForm.cs">
+    <Compile Include="Formulario\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulario\FrmPadrao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formulario\FrmPadrao.Designer.cs">
-      <DependentUpon>FrmPadrao.cs</DependentUpon>
+    <Compile Include="Formulario\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulario\Mensagem.cs">
       <SubType>Form</SubType>
@@ -65,6 +62,7 @@
     <Compile Include="Formulario\Mensagem.Designer.cs">
       <DependentUpon>Mensagem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IFrmPadrao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -74,8 +72,8 @@
     <Compile Include="Validacao\Validacao.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formulario\FrmPadrao.resx">
-      <DependentUpon>FrmPadrao.cs</DependentUpon>
+    <EmbeddedResource Include="Formulario\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\Mensagem.resx">
       <DependentUpon>Mensagem.cs</DependentUpon>
@@ -95,6 +93,7 @@
     <None Include="Resources\Alterar.bmp" />
     <None Include="Resources\Incluir.bmp" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

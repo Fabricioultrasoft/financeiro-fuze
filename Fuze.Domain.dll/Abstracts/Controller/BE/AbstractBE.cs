@@ -105,7 +105,7 @@ namespace Fuze.Domain.dll.Abstracts.Controller.BE
             {
                 xmlDocument = new XmlDocument();
                 sb = new StringBuilder();
-                xmlDocument.Load("D:/ConnectionString.xml");
+                xmlDocument.Load("X:/ConnectionString.xml");
                 XmlNode xmlNode = xmlDocument.SelectSingleNode("Banco_Dados");
                 XmlNode xmlNodeConexao = xmlNode.SelectSingleNode("ConDB");
                 XmlNode xmlNodeServer = xmlNodeConexao.SelectSingleNode("Server");
