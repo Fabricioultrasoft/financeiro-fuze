@@ -56,6 +56,10 @@
     <Compile Include="Formulario\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\FrmPadrao.cs" />
+    <Compile Include="Formulario\FrmPadrao.designer.cs">
+      <DependentUpon>FrmPadrao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulario\Mensagem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Formulario\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmPadrao.resx">
+      <DependentUpon>FrmPadrao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\Mensagem.resx">
       <DependentUpon>Mensagem.cs</DependentUpon>
