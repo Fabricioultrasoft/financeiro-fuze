@@ -120,6 +120,11 @@ namespace FuzeFinanceiro
             return false;
         }
         #endregion
+
+        private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
         
     }
 }
