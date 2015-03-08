@@ -398,6 +398,7 @@
             this.barButtonItem14.Caption = "Pessoa Física";
             this.barButtonItem14.Id = 27;
             this.barButtonItem14.Name = "barButtonItem14";
+            this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
             // 
             // barButtonItem15
             // 
@@ -480,17 +481,16 @@
             // 
             // rbAuxiliar
             // 
+            this.rbAuxiliar.ItemLinks.Add(this.barButtonItem14);
             this.rbAuxiliar.ItemLinks.Add(this.barButtonItem2);
-            this.rbAuxiliar.ItemLinks.Add(this.barButtonItem9);
             this.rbAuxiliar.ItemLinks.Add(this.barButtonItem1);
             this.rbAuxiliar.ItemLinks.Add(this.barButtonItem10);
             this.rbAuxiliar.ItemLinks.Add(this.barButtonItem11);
-            this.rbAuxiliar.ItemLinks.Add(this.barButtonItem2);
             this.rbAuxiliar.ItemLinks.Add(this.barButtonItem15);
-            this.rbAuxiliar.ItemLinks.Add(this.barButtonItem13);
-            this.rbAuxiliar.ItemLinks.Add(this.barButtonItem14);
             this.rbAuxiliar.ItemLinks.Add(this.barButtonItem12);
             this.rbAuxiliar.ItemLinks.Add(this.barButtonItem8);
+            this.rbAuxiliar.ItemLinks.Add(this.barButtonItem13);
+            this.rbAuxiliar.ItemLinks.Add(this.barButtonItem9);
             this.rbAuxiliar.Name = "rbAuxiliar";
             this.rbAuxiliar.ShowCaptionButton = false;
             this.rbAuxiliar.Text = "Tabelas Auxiliares";
